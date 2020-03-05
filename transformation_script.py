@@ -39,15 +39,15 @@ transformed_sheet_fsd['unique_invoice_id'] = transformed_sheet_fsd['invoice_id_i
 final_sheet_fsd = transformed_sheet_fsd.iloc[:,[0,1,2,3,4,5,7,14,19,20,21]]
 
 #adding column for primary division
-final_sheet_fsd.loc[final_sheet_fsd['store_id'] == 10, 'primary_division'] = "Thokar Niaz Baig"
-final_sheet_fsd.loc[final_sheet_fsd['store_id'] == 11, 'primary_division'] = "Capital"
-final_sheet_fsd.loc[final_sheet_fsd['store_id'] == 12, 'primary_division'] = "Safari"
-final_sheet_fsd.loc[final_sheet_fsd['store_id'] == 15, 'primary_division'] = "Faisalabad"
-final_sheet_fsd.loc[final_sheet_fsd['store_id'] == 16, 'primary_division'] = "DHA Store"
-final_sheet_fsd.loc[final_sheet_fsd['store_id'] == 22, 'primary_division'] = "Manghopir"
-final_sheet_fsd.loc[final_sheet_fsd['store_id'] == 23, 'primary_division'] = "Star Gate"
-final_sheet_fsd.loc[final_sheet_fsd['store_id'] == 25, 'primary_division'] = "Ravi Road"
-final_sheet_fsd.loc[final_sheet_fsd['store_id'] == 26, 'primary_division'] = "Model Town"
+final_sheet_fsd.loc[final_sheet_fsd['store_id'] == 10, 'primary_division'] = "Store 10"
+final_sheet_fsd.loc[final_sheet_fsd['store_id'] == 11, 'primary_division'] = "Store 11"
+final_sheet_fsd.loc[final_sheet_fsd['store_id'] == 12, 'primary_division'] = "Store 12"
+final_sheet_fsd.loc[final_sheet_fsd['store_id'] == 15, 'primary_division'] = "Store 15"
+final_sheet_fsd.loc[final_sheet_fsd['store_id'] == 16, 'primary_division'] = "Store 16"
+final_sheet_fsd.loc[final_sheet_fsd['store_id'] == 22, 'primary_division'] = "Store 22"
+final_sheet_fsd.loc[final_sheet_fsd['store_id'] == 23, 'primary_division'] = "Store 23"
+final_sheet_fsd.loc[final_sheet_fsd['store_id'] == 25, 'primary_division'] = "Store 25"
+final_sheet_fsd.loc[final_sheet_fsd['store_id'] == 26, 'primary_division'] = "Store 26"
 
 #adding column for medium
 final_sheet_fsd['medium'] = 'SMS'
@@ -92,15 +92,15 @@ transformed_sheet_b2b_in_store['unique_invoice_id'] = transformed_sheet_b2b_in_s
 final_sheet_b2b_in_store = transformed_sheet_b2b_in_store.iloc[:,[0,1,2,3,4,5,7,14,19,20,21]]
 
 #adding column for primary division
-final_sheet_b2b_in_store.loc[final_sheet_b2b_in_store['store_id'] == 10, 'primary_division'] = "Thokar Niaz Baig"
-final_sheet_b2b_in_store.loc[final_sheet_b2b_in_store['store_id'] == 11, 'primary_division'] = "Capital"
-final_sheet_b2b_in_store.loc[final_sheet_b2b_in_store['store_id'] == 12, 'primary_division'] = "Safari"
-final_sheet_b2b_in_store.loc[final_sheet_b2b_in_store['store_id'] == 15, 'primary_division'] = "Faisalabad"
-final_sheet_b2b_in_store.loc[final_sheet_b2b_in_store['store_id'] == 16, 'primary_division'] = "DHA Store"
-final_sheet_b2b_in_store.loc[final_sheet_b2b_in_store['store_id'] == 22, 'primary_division'] = "Manghopir"
-final_sheet_b2b_in_store.loc[final_sheet_b2b_in_store['store_id'] == 23, 'primary_division'] = "Star Gate"
-final_sheet_b2b_in_store.loc[final_sheet_b2b_in_store['store_id'] == 25, 'primary_division'] = "Ravi Road"
-final_sheet_b2b_in_store.loc[final_sheet_b2b_in_store['store_id'] == 26, 'primary_division'] = "Model Town"
+final_sheet_b2b_in_store.loc[final_sheet_b2b_in_store['store_id'] == 10, 'primary_division'] = "Store 10"
+final_sheet_b2b_in_store.loc[final_sheet_b2b_in_store['store_id'] == 11, 'primary_division'] = "Store 11"
+final_sheet_b2b_in_store.loc[final_sheet_b2b_in_store['store_id'] == 12, 'primary_division'] = "Store 12"
+final_sheet_b2b_in_store.loc[final_sheet_b2b_in_store['store_id'] == 15, 'primary_division'] = "Store 15"
+final_sheet_b2b_in_store.loc[final_sheet_b2b_in_store['store_id'] == 16, 'primary_division'] = "Store 16"
+final_sheet_b2b_in_store.loc[final_sheet_b2b_in_store['store_id'] == 22, 'primary_division'] = "Store 22"
+final_sheet_b2b_in_store.loc[final_sheet_b2b_in_store['store_id'] == 23, 'primary_division'] = "Store 23"
+final_sheet_b2b_in_store.loc[final_sheet_b2b_in_store['store_id'] == 25, 'primary_division'] = "Store 25"
+final_sheet_b2b_in_store.loc[final_sheet_b2b_in_store['store_id'] == 26, 'primary_division'] = "Store 26"
 
 #adding column for medium
 final_sheet_b2b_in_store['medium'] = 'SMS'
@@ -122,8 +122,7 @@ final_sheet_b2b_in_store.to_csv("B2B In-Store.csv", index=False)
 #################################################################
 
 #listing down email address for senders and recepients
-sender_email = 'adi.gillani@gmail.com'
-recipient_email = ['adi.gillani@gmail.com','adnan.gillani@sentimeter.io']
+recipient_email = ['receipient email address', 'another email address']
 
 #composing message for email subject and body
 fsd_email_subject = 'B2B FSD' + ' ' + (datetime.now() - timedelta(1)).strftime('%d-%m-%Y')
@@ -133,7 +132,7 @@ b2b_in_store_subject = 'B2B In-Store' + ' ' + (datetime.now() - timedelta(1)).st
 b2b_in_store_body = 'B2B In-Store data for ' + (datetime.now() - timedelta(1)).strftime('%d-%m-%Y')
 
 #initializing server connection to send email
-yag = yagmail.SMTP(user='adi.gillani@gmail.com', password='helterskelter')
+yag = yagmail.SMTP(user='sender_email', password='password')
 
 #sending out email for B2B FSD
 yag.send(
